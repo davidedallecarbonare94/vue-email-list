@@ -1,7 +1,8 @@
 let root = new Vue({
     el: "#root",
     data: {
-        emailList:"",
+        emailList: "",
+        emailArray: [],
     },
     methods: {
     },
@@ -12,6 +13,7 @@ let root = new Vue({
                 console.log(result);
                 this.emailList = result.data.response;
                 console.log(this.emailList);
+                this.emailArray.push(this.emailList)
         })
         }
     }
